@@ -1,0 +1,59 @@
+<!-- patTemplate:tmpl name="content" --> 
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Konfirmasi Hapus {LABEL}</h1>  
+    </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      
+      <!-- patTemplate:tmpl name="emptydata" type="condition" conditionvar="IS_EMPTY_DATA" -->
+        <!-- patTemplate:sub condition="NO" -->
+        <form name="form_distribusi" id="form_distribusi" action="{FORM_ACTION_URL}" method="POST" class="xhr_form std_form">
+          <div class="panel-heading">
+            Anda akan menghapus {LABEL} dengan nama / kode:  
+              <!-- patTemplate:tmpl name="multiple_delete" type="condition" conditionvar="IS_MULTIPLE_DELETE" -->
+              <!-- patTemplate:sub condition="NO" -->
+              <input type="hidden" value="{ID}" name="idDelete" /><b>{DATANAME}</b>
+              <!-- /patTemplate:sub -->
+              <!-- patTemplate:sub condition="YES" -->
+              <ol>
+                <!-- patTemplate:tmpl name="multiple_delete_item" -->
+                <input type="hidden" value="{MULTI_ID}" name="idDelete[]" />
+                <input type="hidden" value="{MULTI_DATANAME}" name="nameDelete[]" />
+                <li style="font-weight:bold">{MULTI_DATANAME}</li>
+                <!-- /patTemplate:tmpl -->
+              </ol>
+              <!-- /patTemplate:sub -->
+              <!-- /patTemplate:tmpl -->
+          
+          </div>
+          <div class="panel-body">
+            <div style="padding:5px 0px 5px 35px; margin-bottom:10px; background:url(images/alert.gif) left center no-repeat; color:red; font-weight:bold;">
+              Apakah anda yakin? {MESSAGE}
+            </div>
+            <ul class="taskdialog">
+              <li><input type="submit" name="btnDel" class="btn btn-default" value="Hapus" /><p>Data yang sudah dihapus tidak dapat dikembalikan lagi.</p></li>
+              <li><a class="xhr dest_subcontent-element btn btn-default" href="{URL_KEMBALI}" title="Batal">Batal</a><p>Batal menghapus dan menutup dialog ini.</p></li>
+            </ul>
+          </div>
+          
+      </form>
+      <!-- /patTemplate:sub -->
+      <!-- patTemplate:sub condition="YES" -->
+        <div class="dialogbox" id="dialog_delete">
+           <img src="image/alert.gif" alt="" />
+           <p>Anda Harus Memilih Salah Satu Data Untuk Dihapus.<br />Silakan Kembali.</p>
+           <ul class="taskdialog">
+              <li><a class="xhr dest_subcontent-element button" href="{URL_KEMBALI}" title="Batal">Kembali</a>
+              <p>Batal menghapus dan menutup dialog ini.</p></li>
+           </ul>
+        </div>
+      <!-- /patTemplate:sub -->
+      <!-- /patTemplate:tmpl -->
+    </div>
+  </div>
+</div>
+  
+<!-- /patTemplate:tmpl -->

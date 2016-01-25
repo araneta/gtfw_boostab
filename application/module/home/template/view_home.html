@@ -1,0 +1,27 @@
+<!-- patTemplate:tmpl name="content" -->
+<script>
+	   $(document).ready(function(){
+      $(".xzoom").mouseover(function(){
+            //img = this.getElementsByTagName('img')[0];
+            $(this).animate({height: 90, width: 90,}, 300);
+      });
+      
+      $(".xzoom").mouseout(
+         function(){
+            //img = this.getElementsByTagName('img')[0];
+            $(this).animate({height: 75, width: 75,}, 300);
+      });
+   });
+</script>
+<div class="titlepage">   
+   <h1 class="title">Menu</h1>
+</div><br />
+<div class="listview_common" >          
+   <!-- patTemplate:tmpl name="icon_menu" type="SimpleCondition" requiredvars="LINK_URL" -->
+   <div>
+   <a href="{LINK_URL}" class="xhr dest_subcontent-element" {MOUSE_UP}>      
+      <img width="75" height="75" alt="" src="images/icons/{ICON_NAME}" class="xzoom" />{LINK_NAME}</a>   
+   </div>
+   <!-- /patTemplate:tmpl -->        
+<div>
+      <!-- /patTemplate:tmpl -->

@@ -1,0 +1,118 @@
+/* Tabs */
+.tabs {
+	margin: 0px 0px 0px 0px;
+	cursor: default;
+}
+
+.tabs>div {
+	margin: 0px 0px 10px 6px;
+	cursor: default;
+	border-top: 1px solid #F7F2DF;
+}
+
+
+.tabs .buttons {
+	background-image: url(../images/tabs-bg.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	height: 28px;
+	overflow: hidden;
+	margin: 0px 0px 0.5em 0px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	border: none;
+}
+
+.tabs .buttons .start {
+	background-image: url(../images/tabs-start.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 28px;
+	width: 6px;
+	float: left;
+}
+
+.tabs .buttons .end {
+	background-image: url(../images/tabs-end.gif);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	height: 28px;
+	width: 24px;
+	float: left;
+}
+
+.tabs .buttons .tab-divider {
+	height: 28px;
+	width: 15px;
+	float: left;
+	background-image: url(../images/tab-divider.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.tabs .buttons .tab-on {
+	margin: 1px 0px 0px 0px;
+	padding: 6px 15px 0px 15px;
+	height: 21px;
+	float: left;
+	/*
+	background-image: url(../images/tab-on-bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	border-left: 1px solid #F8DB6C;
+	border-right: 1px solid #E5C755;
+	*/
+	background-image: url(../images/tab-on-bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #ffffff;
+	border-left: 1px solid #F8DB6C;
+	border-right: 1px solid #E5C755;
+}
+
+/*
+.tabs .buttons .tab-on:hover {
+	background-position: bottom;
+}
+*/
+
+.tabs .buttons .tab-off {
+	color: #555555;
+	height: 20px;
+	float: left;
+	background-image: url(../images/tab-off-bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 4px 15px 0px 15px;
+	border-left: 1px solid #E0E0E0;
+	margin: 4px 0px 1px 0px;
+	overflow: hidden;
+}
+
+
+.tabs .buttons .tab-off:hover {
+	color: #603913;
+	background-position: bottom;
+	border-left: 1px solid #FFE992;
+}
+
+.tabs .buttons .tab-dis {
+	color: #AAA;
+	height: 20px;
+	float: left;
+	background-image: url(../images/tab-dis-bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 4px 15px 0px 15px;
+	border-left: 1px solid #E0E0E0;
+	margin: 4px 0px 1px 0px;
+	overflow: hidden;
+}
+
+.tabs .buttons .tab-dis:hover {
+}
+
+.tabs .tab {
+	margin: 0px 0px 0px 0px;
+	border: none;
+}

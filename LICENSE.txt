@@ -1,0 +1,15 @@
+-- License Agreement GTFW --
+
+Hak cipta (c) 2006-2014, PT Gamatechno Indonesia. Lisensi ini merupakan perjanjian hukum antara PT Gamatechno Indonesia dengan pengguna GTFW (Gamatechno Framework). Dengan mengunduh, memiliki dan menggunakan framework ini, maka pengguna GTFW setuju untuk mematuhi syarat dan ketentuan dari lisensi ini. Pengguna GTFW diijinkan untuk menggunakan, menyalin, dan mendistribusikan GTFW Framework beserta dokumentasi, dengan syarat kondisi berikut ini terpenuhi:
+
+1. Salinan perjanjian lisensi ini harus disertakan dalam distribusi.
+2. Pendistribusian kembali source code harus menyertakan pemberitahuan hak cipta di atas source code pada semua file dan tanpa modifikasi dalam base GTFW.
+3. Setiap file yang telah dimodifikasi harus menyertakan pemberitahuan yang menyatakan sifat perubahan dan nama orang-orang yang mengubahnya.
+4. Produk yang berasal dari GTFW harus menyertakan pengakuan bahwa produk tersebut berasal dari GTFW dengan versi tertentu dalam dokumentasinya, tidak menggunakan nama GTFW sebagai bagian dari nama produk tersebut, dan produk tersebut bukan merupakan produk komersial yang bertujuan mendapatkan profit.
+5. Pengguna GTFW setuju untuk mengganti kerugian atas klaim pihak ketiga yang langsung, tidak langsung, insidental, atau konsekuensial apapun, dari penyalahgunaan framework, atau pelanggaran persyaratan lisensi ini.
+
+-- Disclaimer of Warranty --
+GTFW disediakan sebagaimana adanya, tanpa jaminan apapun, baik tersurat maupun tersirat.
+
+-- Limitations of Liability --
+Pengguna menanggung segala risiko yang terkait dengan instalasi dan penggunaan GTFW. Pemegang lisensi bertanggung jawab menentukan kelayakan penggunaan dan risiko yang terkait dengan penggunaannya, serta tidak terbatas untuk risiko kesalahan aplikasi, kerusakan peralatan, kehilangan data dan gangguan operasional.

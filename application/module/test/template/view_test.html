@@ -1,0 +1,22 @@
+<!-- patTemplate:tmpl name="content" -->
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Test Module</h1>
+	</div>	
+</div>
+
+<!-- patTemplate:tmpl name="data" type="condition" conditionvar="IS_EMPTY" -->
+<!-- patTemplate:sub condition="NO" -->
+<div class="row">
+	<div class="col-lg-12">
+		<ol>
+			<!-- patTemplate:tmpl name="item" -->
+			<li><a href="{URL}" class="{CLASS}" target="{TARGET}">{LABEL}</a></li>
+			<!-- /patTemplate:tmpl -->
+		</ol>
+
+	</div>
+</div>
+<!-- /patTemplate:sub -->
+<!-- /patTemplate:tmpl -->
+<!-- /patTemplate:tmpl -->

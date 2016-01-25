@@ -1,0 +1,47 @@
+<!-- PatTemplate:tmpl name="content" -->
+<br/>
+<h3><strong>Latihan Enam (Tambah Data + Notifikasi)</strong></h3>
+<!-- patTemplate:tmpl name="warning_box" visibility="hidden" -->
+<div class="alert {CLASS_PESAN}">
+    {ISI_PESAN}
+</div>
+<!-- /patTemplate:tmpl -->
+
+<p align="right">
+                <a class="xhr dest_subcontent-element" href="{URL_ADD}" title="Tambah Menu" tabindex="2"><button class="btn btn-success"><span class="glyphicon glyphicon-plus"> Tambah</span></button></a>
+</p>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Data Mahasiswa
+            </div>
+            <div class="panel-body">
+				<table class="table table-striped table-bordered table-hover">
+					<tr>
+						<th width="5">No</th>
+						<th>Nama</th>
+						<th>Asal Daerah</th>
+					</tr>
+					<!-- patTemplate:tmpl name="data_mahasiswa" type="condition" conditionvar="DATA_EMPTY" -->
+		<!-- patTemplate:sub condition="NO" -->
+		 <tr><td colspan="4" align="center"> -Data tidak ditemukan- </td></tr>
+		<!-- /patTemplate:sub -->
+		<!-- patTemplate:sub condition="YES" -->
+                    <!-- patTemplate:tmpl name="data_mahasiswa_item" -->
+					<tr>
+						<td>{NO}</td>
+						<td>{NAMA_MHS}</td>
+						<td>{ALAMAT_MHS}</td>
+					</tr>
+					<!-- /patTemplate:tmpl -->
+					<!-- /patTemplate:sub -->
+					<!-- /patTemplate:tmpl -->
+				</table>
+				</div>
+				</div>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- /patTemplate:tmpl -->

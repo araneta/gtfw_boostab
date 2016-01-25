@@ -1,0 +1,161 @@
+body {
+   font-family: Tahoma;
+   font-size: 11px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   padding: 2px 0px;
+   margin: 0px;
+}
+
+h1 {
+   font-size: 15pt;
+}
+
+h2 {
+   font-size: 13pt;
+}
+
+h3 {
+   font-size: 11pt;
+}
+
+h4 {
+   font-size: 9pt;
+}
+
+hr {
+   clear: both;
+}
+
+img {
+   margin: 2px;
+}
+
+.center {
+   text-align: center;
+}
+
+div.page-portrait {
+   visibility: visible;
+   font-family: Tahoma;
+   font-size: 11px;
+   margin: 6px 0px 6px 0px;
+   width: 17cm;
+}
+
+div.page-landscape {
+   visibility: visible;
+   font-family: Tahoma;
+   font-size: 11px;
+   margin: 6px 0px 6px 0px;
+   width: 25.5cm;
+}
+
+table {
+   border-collapse: collapse;
+}
+
+.box {
+   border: 1px solid #ccc;
+   padding: 4px;
+}
+
+table tr td {
+   font-family: Tahoma;
+   font-size: 11px;
+   padding: 0px 2px 0px 2px;
+}
+
+table tr th {
+   font-family: Tahoma;
+   font-size: 11px;
+   font-weight: bold;
+   background-color: #fff;
+   padding: 2px;
+}
+
+.tabel-common tr td {
+   font-family: Tahoma;
+   font-size: 11px;
+   padding: 0px 2px 0px 2px;
+   border: 1px solid #ccc;
+   vertical-align: top;
+}
+
+.tabel-common .nama {
+   width: 250px;
+   overflow: hidden;
+}
+
+.tabel-common tr th {
+   font-family: Tahoma;
+   font-size: 11px;
+   font-weight: bold;
+   background-color: #fff;
+   padding: 2px;
+   border: 1px solid #ccc;
+}
+
+.tabel-info tr td, th {
+   font-family: Tahoma;
+   font-size: 11px;
+   padding: 2px;
+   font-weight: bold;
+}
+
+div.nobreak .hidden {
+   visibility: hidden;
+   display: none;
+}
+
+div.page-break .hidden {
+   visibility: visible;
+   margin: 10px 0px 10px 0px;
+}
+
+.page-break {
+   clear: both;
+}
+
+.link {
+	clear:both;
+	visibility: visible;
+}
+
+/* added by roby@gamatechno.com */
+.header {
+	float: left;
+   height: 70px;
+   width: 100%;
+}
+
+.header img {
+   float: left;
+	margin: 10px 10px 0 10px;
+}
+
+.header h1 {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 14px 0 0 10px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.header h2 {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 0 12px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+/* khusus pengesah */
+.box_pengesah {
+   float: right;
+   width: 33%;
+   text-align: center;
+}

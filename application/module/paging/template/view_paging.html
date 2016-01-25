@@ -1,0 +1,67 @@
+<!-- patTemplate:tmpl name="content" -->
+   <!-- patTemplate:tmpl name="page_nav" visibility="hidden" -->
+   
+   <ul class="pagination">
+      <!-- patTemplate:tmpl name="page_nav_first" type="condition" conditionvar="IS_AVAIL" -->
+         <!-- patTemplate:sub condition="YES" -->
+         <li>
+            <a href="{FIRST_NAV_URL}" class="xhr dest_{NAV_CLASS}">&lt;&lt;</a>
+         </li>
+         <!-- /patTemplate:sub -->
+         <!-- patTemplate:sub condition="NO" -->
+         <li class="disabled">
+            <a>&lt;&lt;</a>
+         </li>
+         <!-- /patTemplate:sub -->
+      <!-- /patTemplate:tmpl -->
+
+
+      <!-- patTemplate:tmpl name="page_nav_prev" type="condition" conditionvar="IS_AVAIL" -->
+         <!-- patTemplate:sub condition="YES" -->
+         <li>
+            <a href="{PREV_NAV_URL}" class="xhr dest_{NAV_CLASS}">&lt;</a>
+         </li>
+         <!-- /patTemplate:sub -->
+         <!-- patTemplate:sub condition="NO" -->
+         <li class="disabled">
+              <a>&lt;</a>
+            </li>              
+         <!-- /patTemplate:sub -->
+      <!-- /patTemplate:tmpl -->
+  
+         <!-- patTemplate:tmpl name="page_nav_info" -->
+            <li class="disabled">
+                  <a href="#">{START_REC_INFO}&ndash;{END_REC_INFO} dari {ALL_REC_INFO}</a>
+            </li>
+         <!-- /patTemplate:tmpl -->
+      
+      
+      <!-- patTemplate:tmpl name="page_nav_next" type="condition" conditionvar="IS_AVAIL" -->
+         <!-- patTemplate:sub condition="YES" -->
+         <li>
+            <a href="{NEXT_NAV_URL}" class="xhr dest_{NAV_CLASS}">&gt;</a>
+         </li>
+         <!-- /patTemplate:sub -->
+         <!-- patTemplate:sub condition="NO" -->
+         <li class="disabled">
+            <a>&gt;</a>
+         </li>            
+         <!-- /patTemplate:sub -->
+      <!-- /patTemplate:tmpl -->
+
+      <!-- patTemplate:tmpl name="page_nav_last" type="condition" conditionvar="IS_AVAIL" -->
+         <!-- patTemplate:sub condition="YES" -->
+         <li>
+            <a href="{LAST_NAV_URL}" class="xhr dest_{NAV_CLASS}">&gt;&gt;</a>
+         </li>
+         <!-- /patTemplate:sub -->
+         <!-- patTemplate:sub condition="NO" -->
+         <li class="disabled">
+            <a>&gt;&gt;</a>
+         </li>            
+         <!-- /patTemplate:sub -->
+      <!-- /patTemplate:tmpl -->
+   </div>
+
+   <!-- /patTemplate:tmpl -->
+<!-- /patTemplate:tmpl -->

@@ -1,0 +1,50 @@
+<!-- patTemplate:tmpl name="content" -->
+<h1>Manajemen Grup</h1>
+<br/>
+
+   <!-- patTemplate:tmpl name="warning_box" visibility="hidden" -->
+<div id="warning_box" class="small">
+   <div class="{CLASS_PESAN}" onclick="$('#warning_box').fadeOut('slow');">
+      {ISI_PESAN}
+   </div>
+</div>
+   <!-- /patTemplate:tmpl -->
+   <br/>
+   
+   <div class="pageBar small">
+      <div class="toolbar"> 
+   		<a class="xhr dest_subcontent-element tambah" href="{GROUP_URL_ADD}" title="Tambah Data Group" tabindex="2"><img src="images/icons_small/button-add.gif" alt=""> Tambah</a> 	
+      </div>
+   </div>
+
+   <table class="table-common small">
+      <tr>
+         <th>No</th>
+         <th>Aksi</th>
+         <th>Nama Grup</th>
+         <th>Deskripsi</th>
+         <th>Unit Kerja</th>
+         <th>Hak Akses</th>   
+      </tr>
+      <!-- patTemplate:tmpl name="data_group" type="condition" conditionvar="GROUP_EMPTY" -->
+         <!-- patTemplate:sub condition="YES" -->
+         <tr><td colspan="6" align="center"><em>-- Data tidak ditemukan --</em></td></tr>
+         <!-- /patTemplate:sub -->
+         <!-- patTemplate:sub condition="NO" -->
+            <!-- patTemplate:tmpl name="data_group_item" -->
+            <tr class="{GROUP_CLASS_NAME}">
+               <td>{GROUP_NUMBER}</td>
+               <td class="links">
+                  <a class="xhr dest_subcontent-element ubah" href="{GROUP_URL_EDIT}" title="Ubah"><img src="images/icons_small/button-edit.gif" alt="Ubah" /></a>
+                  <a class="xhr dest_subcontent-element hapus" href="{GROUP_URL_DELETE}"><img src="images/icons_small/button-delete.gif" alt="Delete" /></a>
+               </td>
+               <td>{GROUP_GROUP_NAME}</td>
+               <td>{GROUP_GROUP_DESCRIPTION}</td>
+               <td>{GROUP_UNIT_KERJA}</td>
+               <td>{GROUP_HAK_AKSES}</td>
+            </tr>
+            <!-- /patTemplate:tmpl -->
+         <!-- /patTemplate:sub -->
+      <!-- /patTemplate:tmpl -->
+   </table>
+<!-- /patTemplate:tmpl -->

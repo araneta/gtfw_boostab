@@ -1,0 +1,83 @@
+<!-- patTemplate:tmpl name="content" -->
+<script type="text/javascript">
+$(function () {
+    $('.checkall').click(function () {
+        $(this).parents('fieldset:eq(0)').find(':checkbox').attr('checked', this.checked);
+    });
+    
+    $('.childCheckbox').click(function() {
+		if (this.checked == false){
+			var flag = false;
+			$(this).parents('fieldset:eq(0)').find('.childCheckbox').each(
+				function() {
+					if (this.checked == true)
+						flag = true;
+				}
+			);
+			$(this).parents('fieldset:eq(0)').find('.checkall').attr('checked', flag);
+		}
+		if (this.checked == true) 
+			$(this).parents('fieldset:eq(0)').find('.checkall').attr('checked', true);
+	});
+});
+</script>
+<h1>Manajemen Grup</h1>
+<br/>
+   <!-- patTemplate:tmpl name="warning_box" visibility="hidden" -->
+<div id="warning_box" class="small">
+   <div class="notebox-alert" onclick="$('#warning_box').fadeOut('slow');">
+      {ISI_PESAN}
+   </div>
+</div>
+   <br/>
+   <!-- /patTemplate:tmpl -->
+   <form method="POST" action="{URL_ACTION}" class="xhr_form std_form" id="frmInput">
+      <table  width="100%" class="table-edit small">
+         <tr class="subhead"> 
+            <th colspan="2">{JUDUL} Group</th>
+         </tr>
+         <tr>
+            <th>Nama Grup</th>
+            <td><input type="text" name="groupname" value="{GROUPNAME}" size="30" notab="1"/> *</td>
+         </tr>
+         <tr>
+            <th>Deskripsi</th>
+            <td><textarea name="description" cols="65" tabindex="2">{DESKRIPSI}</textarea>
+            <input type="hidden" name="grp" value="{GRP}" /></td>
+         </tr>
+         <tr>
+            <th>Unit Kerja</th>
+            <td>
+         <!-- patTemplate:gtfwrendermodule module="combobox" submodule="combobox" action="view" name="unit_kerja" value="{UNIT_KERJA}" / -->
+            *</td>
+         </tr>
+         <tr>
+            <th>Hak Akses</th>
+            <td>
+            <!-- patTemplate:tmpl name="menu" type="condition" conditionvar="MENU_PARENT" -->
+               <!-- patTemplate:sub condition="YES" -->
+               <h2><b>{PARENT_MENU}</b></h2>
+               <!-- /patTemplate:sub -->
+               <!-- patTemplate:sub condition="NO" --> 
+               <fieldset style="border:0;padding:0;"><input type="checkbox" class="checkall checkact" name=menu[] value="{IDMENU}" {CHECK}/><b>{MENU}</b><div class="actionlist"><ul>{ACTIONLIST}<ul></ul></div></fieldset>
+               <!-- /patTemplate:sub -->
+            <!-- /patTemplate:tmpl -->      
+            </td>
+         </tr>
+         <tr class="buttons">
+            <th></th>
+            <td>
+               <input type="submit" name="btnsimpan" value=" Simpan " class="buttonSubmit"/>
+               <input type="submit" name="btnbatal" value=" Batal " class="buttonSubmit"/>
+            </td>
+         </tr>
+      </table>
+   </form>
+<br/>
+<div class="petunjuk-area small">
+   <h4>Petunjuk:</h4>
+   <ul>
+      <li>Tanda * menunjukkan bahwa field ini harus diisi. </li>
+   </ul>
+</div>
+<!-- /patTemplate:tmpl -->

@@ -1,0 +1,43 @@
+<!-- patTemplate:tmpl name="content" -->
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Tiny MCE</h1>
+	</div>	
+</div>
+
+
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Tiny MCE
+			</div>
+			<div class="panel-body">
+
+				<form method="POST" action="{URL}" class="xhr_simple_form dest_subcontent-element form-horizontal" id="frmInput">
+					<input type="hidden" name="data-id" value="{ID}">
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="parent_id">Induk</label>
+						<div class="col-sm-10">
+							<textarea name="text" id="text_tiny">{TEXT}</textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button class="btn btn-default" type="submit">Simpan</button>
+							<a href="{URL_CANCEL}" class="xhr dest_subcontent-element btn btn-default">Batal</a>
+						</div>
+					</div>					
+				</form>				
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+tinymce.init({
+    selector: "#text_tiny"
+ });
+</script>
+
+<!-- /patTemplate:tmpl -->

@@ -1,0 +1,126 @@
+<!-- patTemplate:tmpl name="content" -->
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Manajemen Module</h1>	
+	</div>
+</div>
+
+<!-- patTemplate:tmpl name="warning_box" visibility="hidden" -->
+<div class="alert alert-{CLASS_PESAN}">{ISI_PESAN}</div>
+<!-- /patTemplate:tmpl -->
+<div class="row">
+<div class="col-lg-12">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			List Sub Module pada Module {MODULE}
+		</div>
+		<div class="panel-body">
+
+			<p class="text-right">
+				<a class="xhr dest_subcontent-element" href="{URL_BACK}" title="Tambah Menu" tabindex="2"><button class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"> Kembali</span></button></a>
+			</p>
+
+
+			<form method="POST" name="frmInput" action="{URL_ACTION}" class="form-horizontal" >
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong><input type="checkbox" name="registerModule" checked> Pilih SubModule Yang Ingin Diregisterkan</strong>
+					</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered table-hover">
+								<tr>
+									<th width="15px">No</th>
+									<th width="30px">Register</th>
+									<th width="30px">Access</th>
+									<th>SubModule</th>
+									<th>Action</th>
+									<th>Type</th>
+									<th>Default</th>
+									<!-- patTemplate:tmpl name="header_aksi" visibility="hidden" -->
+									<th>Aksi</th>
+									<!-- /patTemplate:tmpl -->
+								</tr>
+								<!-- patTemplate:tmpl name="data" type="condition" conditionvar="DATA_EMPTY" -->
+								<!-- patTemplate:sub condition="YES" -->
+								<tr><td colspan="3" align="center"><em>-- Data not found --</em></td></tr>
+								<!-- /patTemplate:sub -->
+								<!-- patTemplate:sub condition="NO" -->
+								<!-- patTemplate:tmpl name="data_item" -->
+								<tr class="{CLASS_NAME}">
+									<td align="center" width="15px">{NUMBER}</td>
+									<td align="center">
+										<!--<a class="xhr dest_subcontent-element" href="{URL_DETAIL}" title="Detail Submodul"><img src="images/button-detail.gif" alt="Detail"/></a>-->
+										{CHECKBOX}
+									</td>
+									<td align="center">{COMBOBOX}</td>
+									<td align="left">{SUBMODULENAME}</td>
+									<td align="center">{ACTION}</td>
+									<td align="center">{TYPE}</td>
+									<td align="center"><input type="radio" name="default" value="{NAME_CHECKBOX}" {DEFAULT}></td>
+									<!-- patTemplate:tmpl name="show_data_aksi" visibility="hidden" -->
+									<td align="center">
+										<!-- patTemplate:tmpl name="data_aksi" type="condition" conditionvar="IS_EMPTY" -->
+										<!-- patTemplate:sub condition="NO" -->
+										{AKSILABEL}
+										<!-- /patTemplate:sub -->
+										<!-- patTemplate:sub condition="YES" -->
+										<select name="Aksi-{NAME_CHECKBOX}">
+											<option value="">--Pilih--</option>
+											<!-- patTemplate:tmpl name="data_aksi_item" -->
+											<option value="{AKSIID}" {SELECTED}>{AKSILABEL}</option>
+											<!-- /patTemplate:tmpl -->
+										</select>
+										<!-- /patTemplate:sub -->
+										<!-- /patTemplate:tmpl -->
+									</td>
+									<!-- /patTemplate:tmpl -->
+								</tr>
+								<!-- /patTemplate:tmpl -->
+								<!-- /patTemplate:sub -->
+								<!-- /patTemplate:tmpl -->
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>{CHECKED_REGISTER_MENU} Buat juga menu baru untuk module yang diregisterkan</strong>
+					</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered table-hover">
+								<tr>
+									<td>Parent Menu</td>
+									<td><!-- patTemplate:gtfwrendermodule module="combobox" submodule="combobox" action="view" name="MenuParentId"  / --></td>
+								</tr>
+								<tr>
+									<td>Nama Menu</td>
+									<td><input type="text" class="form-control" name="MenuName" size="50" value="{MENUNAME}" {READONLY}></td>
+								</tr>
+								<tr>
+									<td>Tampilkan</td>
+									<td><!-- patTemplate:gtfwrendermodule module="combobox" submodule="combobox" action="view" name="IsShow"  / --></td>
+								</tr>
+								<tr>
+									<td>Icon Menu</td>
+									<td><input type="text" class="form-control" name="IconPath" size="50" value="{ICONPATH}" {READONLYS}></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="text-center">
+						<button class="btn btn-default" type="submit" name="btnsimpan">Simpan</button>
+						<a class="xhr dest_subcontent-element" href="{URL_BACK}"><button class="btn btn-default"> Batal</button></a>
+					</div>
+				</div>
+
+			</form>				
+		</div>
+	</div>
+</div>
+</div>
+<!-- /patTemplate:tmpl -->

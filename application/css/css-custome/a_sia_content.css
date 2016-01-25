@@ -1,0 +1,8 @@
+#subcontent-wide {
+	/*width: 578px;*/
+	width: 800px;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}

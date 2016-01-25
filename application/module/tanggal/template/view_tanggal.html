@@ -1,0 +1,51 @@
+<!-- patTemplate:tmpl name="content" -->            
+   <div>
+      <select name="{COMBO_NAME}_day" id="{COMBO_NAME}_day" {STATUS_TANGGAL} onChange="if(self.gfPop)gfPop.updateHidden(this)" style="display:{SET_DISPLAY}">
+         <!-- patTemplate:tmpl name="list_date" type="condition" conditionvar="IS_EMPTY" -->
+				<!-- patTemplate:sub condition="YES" -->                              
+               <option value="">Data tidak ditemukan</option>
+				<!-- /patTemplate:sub -->
+            <!-- patTemplate:sub condition="NO" -->               
+               <!-- patTemplate:tmpl name="item_date" -->                                 
+                  <option value="{COMBO_VALUE}" {COMBO_SELECTED}>{COMBO_LABEL}</option>               
+               <!-- /patTemplate:tmpl -->
+            <!-- /patTemplate:sub -->
+         <!-- /patTemplate:tmpl -->   
+      </select>
+      <select name="{COMBO_NAME}_mon" id="{COMBO_NAME}_mon" {STATUS_BULAN} onChange="if(self.gfPop)gfPop.updateHidden(this)">         
+         <!-- patTemplate:tmpl name="list_month" type="condition" conditionvar="IS_EMPTY" -->
+				<!-- patTemplate:sub condition="YES" -->               
+               <option value="">Data tidak ditemukan</option>
+				<!-- /patTemplate:sub -->
+            <!-- patTemplate:sub condition="NO" -->
+               <!-- patTemplate:tmpl name="item_month" -->
+                  <option value="{COMBO_VALUE}" {COMBO_SELECTED}>{COMBO_LABEL}</option>               
+               <!-- /patTemplate:tmpl -->
+            <!-- /patTemplate:sub -->
+         <!-- /patTemplate:tmpl -->   
+      </select>
+      <select name="{COMBO_NAME}_year" id="{COMBO_NAME}_year" {STATUS_TAHUN} onChange="if(self.gfPop)gfPop.updateHidden(this)">
+         <!-- patTemplate:tmpl name="list_year" type="condition" conditionvar="IS_EMPTY" -->
+				<!-- patTemplate:sub condition="YES" -->               
+               <option value="">Data tidak ditemukan</option>
+				<!-- /patTemplate:sub -->
+            <!-- patTemplate:sub condition="NO" -->
+               <!-- patTemplate:tmpl name="item_year" -->
+                  <option value="{COMBO_VALUE}" {COMBO_SELECTED}>{COMBO_LABEL}</option>               
+               <!-- /patTemplate:tmpl -->
+            <!-- /patTemplate:sub -->
+         <!-- /patTemplate:tmpl -->           
+      </select>
+      
+     <!--<input type="button" name="{COMBO_NAME}Btn" value="..." class="vbtn"
+                  onClick="if(this.blur)this.blur();var fm=this.form;
+                  if(self.gfPop)gfPop.fPopCalendar(fm.{COMBO_NAME},null,null,fm.{COMBO_NAME}Btn,null);">
+               <input type="hidden" name="{COMBO_NAME}" value="{COMBO_DEFAULT_VALUE}">
+      
+      <iframe width=174 height=189 name="gToday:normal:js/calendar/agenda.js"
+         id="gToday:normal:js/calendar/agenda.js" src="js/calendar/ipopeng.htm"
+         scrolling="no" frameborder="0" style="visibility:visible; z-index:999; position:absolute;
+         left:-500px; top:0px;">
+      </iframe> -->
+   </div> 
+<!-- /patTemplate:tmpl -->

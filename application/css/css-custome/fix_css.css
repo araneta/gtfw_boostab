@@ -1,0 +1,53 @@
+.animation-icon{
+   /*
+   height: 100px;
+   width: 200px;
+   */
+	width:48px;
+	height:48px;
+}
+
+.hoverTd td{
+   /*background-color: #91bdff;*/
+   /*background-color: #FFF6C3;*/
+   background-color: #FFF2A9;
+   /*background-image: url('../sia-mocca/images/table-common-td-active-sele.gif');
+   border-bottom: 1px solid #F1D434;
+   border-top: 1px solid #F1D434;*/
+}
+
+#loginBox-head img{
+   display:none;
+}
+
+#loginBox-title img{
+   display:none;
+}
+
+#loginBox-body{
+   width:250px;
+   text-align:left;
+}
+
+#form_login{
+   width:150px;
+   text-align:left;
+}
+
+#loginWrapper{
+   padding:0px 0px 30px 0px;
+}
+
+.gtfw_multi_windows {
+    font-family: Arial,Tahoma,sans-serif;
+    font-size: 0.8em;
+}
+
+.small {
+    width: 650px;
+}
+
+#gtfw_menu {
+    margin-top: 3px;
+}
+

@@ -1,0 +1,86 @@
+.table-common th {
+	height: 22px;
+}
+
+.table-common td {
+	vertical-align: middle;
+   height: 28px;
+}
+
+.table-common .list td {
+	vertical-align: middle;
+}
+
+.table-common .links img {
+	border: none;
+	float: left;
+	margin: -2px 0 0 0;
+	padding: 0;
+}
+
+.table-common .links a {
+	display: block;
+	float: left;
+	clear: none;
+	border: #ece9d6 1px solid;
+	padding: 4px 4px 4px 4px;/*4px 7px;*/
+	margin: 0px 1px 0px 1px;
+	font-family: Tahoma, Arial, sans-serif; 
+	font-size: 8pt;
+	cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+
+.table-details .table-common th {
+    padding: 5px;
+}
+
+.table-edit .subhead th {
+   padding: 5px;
+}
+
+.table-edit .buttons th {
+   padding: 5px;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 0.8em;
+}
+
+.table-edit .buttons input {
+   float: none;
+}
+
+.table-edit td {
+    /*padding: 4px 5px 4px 5px;*/
+    padding: 0.1em 0.6em;
+    height: 28px;
+}
+
+.table-edit .checkrow {
+	border: none;
+	margin: 0px 0px 0px 0px;
+}
+
+.table-edit tr.selected td {
+	background-color: #D2FAC8;
+}
+
+.table-edit tr.selected-even td {
+	background-color: #D8FAC8;
+}
+
+.table-edit .list td {
+	vertical-align: middle;
+}
+
+.table-edit .list .checkrow {
+	border: none;
+	margin: 0px 0px 0px 0px;
+}
+
+.table-edit .list tr.selected-even td {
+	background-color: #D8FAC8;
+}
